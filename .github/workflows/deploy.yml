@@ -35,7 +35,8 @@ jobs:
       - name: Install Dependencies
         run: |
           pnpm install --frozen-lockfile
-          pnpm add -D wrangler@3.114.14
+          pnpm add -D wrangler@3.114.14 --save-exact
+          pnpm exec wrangler --version
 
       - name: Run deploy script
         env:
